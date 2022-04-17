@@ -24,7 +24,7 @@ php artisan:migrate
 ```
 php artisan passport:client --password
 ```
-and be sure you generate password by selecting Admin Provider after hitting above cmd as this project has used Admin provider rather than defualt one(user).You can check app/config.php to get more about it. 
+<p>and be sure you generate password by selecting Admin Provider after hitting above cmd as this project has used Admin provider rather than defualt one(user).You can check app/config.php to get more about it. </p>
 
-###### All things are done !! Now you are good to go for authenticating and suggest you to check apiController.php,api.php,web.php and views for better understanding how things are being done...
+## All things are done !! Now you are good to go for authenticating and suggest you to check apiController.php,api.php,web.php and views for better understanding how things are being done...
 
