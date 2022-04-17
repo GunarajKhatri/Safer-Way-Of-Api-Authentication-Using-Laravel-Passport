@@ -6,7 +6,6 @@ use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Firebase\JWT\JWT;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +15,8 @@ class ApiController extends Controller
     public function RefreshToken(Request $request)
     {
         $refresh = $request->cookie('Rtoken');
+        // make sure you have client credentials with id = 1 for 'admin' provider or modify ibelow find id as per table data
+
         $client = DB::table('oauth_clients')->select('id', 'secret')->find(1);
         $data = [
             'grant_type' => 'refresh_token',
